@@ -1,0 +1,28 @@
+<app-nav></app-nav>
+<div>
+    <ul class="allRoom_avail_container">
+        <li>
+            <div class="byDate_title_col">Room</div>
+            <div class="byDate_title_col">Floor</div>
+            <div class="byDate_title_col">Bathtub</div>
+            <div class="byDate_title_col">Balcony</div>
+            <div class="byDate_title_col">Room State</div>
+            <div class="byDate_title_col">Price</div>
+            <div class="byDate_title_col_last">Edit</div>
+            <div class="byDate_title_col_last">Delete</div>
+        </li>
+    </ul>
+    <ul class="allRoom_avail_container">
+        <li *ngFor="let room of allRooms; index as i ">
+            <div class="byDate_data_col">{{room.name}}</div>
+            <div class="byDate_data_col">{{room.floor}}</div>
+            <div class="byDate_data_col">{{room.balcony? "Yes": "No"}}</div>
+            <div class="byDate_data_col">{{room.bathTub? "Yes": "No"}}</div>
+            <div class="byDate_data_col">{{room.roomState? "Available":"Unavailable"}}</div>
+            <div class="byDate_data_col">${{room.price}}</div>
+            <div class="byDate_data_col_last"><button mat-raised-button color="primary" (click)="onEdit(room._id, room.name, room.floor, room.balcony, room.bathTub, room.roomState, room.price)">Edit</button></div>
+            <div class="byDate_data_col_last"><button mat-raised-button color="primary" (click)="onDelete(room._id)">Delete</button></div>
+        </li>
+    </ul>
+    <!-- <button (click)="getRooms()">Get Rooms</button> -->
+</div>

@@ -1,0 +1,17 @@
+<app-nav></app-nav>
+<p>Edit Room</p>
+<hr/>
+<form class="loginForm"  [formGroup]="editRoom" (ngSubmit)="onSubmit()">
+    <label name="name">Room Name</label>
+    <input type="text" name="name" formControlName="name">
+    <label name="floor">Floor</label>
+    <input type="text" name="floor" formControlName="floor">
+    <label name="bathTub">Bath Tub</label>
+    <input type="text" name="bathTub" formControlName="bathTub">
+    <label name="Balcony">Balcony</label>
+    <input type="text" name="balcont" formControlName="balcony"> 
+    <label name="price">Price</label>
+    <input type="text" name="price" formControlName="price"> 
+    <br />
+    <button type="submit" mat-raised-button color="primary">Submit Edit</button>
+</form>

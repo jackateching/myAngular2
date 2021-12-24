@@ -1,0 +1,38 @@
+<app-nav></app-nav>
+<h2>Log records for admin</h2>
+<ul class="allRoom_avail_container">
+    <li>
+        <div class="byDate_title_col">Log Date/Time</div>
+        <div class="byDate_title_col">User</div>
+        <div class="byDate_title_col">Authority</div>
+        <div class="byDate_title_col">Action Performed</div>
+        <div class="byDate_title_col">Apply to Room</div>
+        <div class="byDate_title_col_last"></div>
+        <div class="byDate_title_col_last"></div>
+    </li>
+</ul>
+<div>
+    <app-loading-spinner *ngIf="isLoading"></app-loading-spinner>
+  </div>
+<ul class="allRoom_avail_container" *ngIf="!isLoading">
+    <li *ngFor="let log of logs
+    | paginate
+    : {
+        itemsPerPage: itemsPerPage,
+        currentPage: page,
+        totalItems: totalItems
+      }
+    ">
+        <div class="byDate_data_col">{{log.datetime}}</div>
+        <div class="byDate_data_col">{{log.username}}</div>
+        <div class="byDate_data_col">{{log.level}}</div>
+        <div class="byDate_data_col">{{log.action}}</div>
+        <div class="byDate_data_col">{{log.roomName}}</div>
+        <div class="byDate_data_col"></div>
+        <div class="byDate_data_col"></div>
+    </li>
+</ul>
+<pagination-controls
+  class="pagi"
+  (pageChange)="gty((page = $event))"
+></pagination-controls>

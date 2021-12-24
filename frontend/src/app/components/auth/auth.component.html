@@ -1,0 +1,53 @@
+<div id="login">
+  <main>
+    <app-logo-header></app-logo-header>
+    <div class="alert alert-danger" *ngIf="error">
+      {{error}}
+    </div>
+    <div>
+      <app-loading-spinner *ngIf="isLoading"></app-loading-spinner>
+    </div>
+    <form class="loginForm" [formGroup]="authform" (ngSubmit)="onSubmit()" *ngIf="!isLoading">
+      <p [ngStyle]="{'text-align':'center', 'font-size':'22px', 'margin':'0', 'text-decoration':'underline'}">{{isSignUpMode? "Sign Up": "Sign In"}}</p>
+      <label name="username">Username</label>
+      <input
+        type="text"
+        id="username"
+        name="username"
+        formControlName="username"
+      />
+      <span class="invalid"
+        *ngIf="
+          !authform.get('username')?.valid &&
+          authform.get('username')?.touched
+        "
+        >Please enter a valid username</span
+      ><br/>
+      <label name="password">Password </label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        formControlName="password"
+      />
+      <span class="invalid"
+        *ngIf="
+          !authform.get('password')?.valid &&
+          authform.get('password')?.touched
+        "
+        >Please enter a valid password</span
+      >
+      <br />
+      <span class="invalid" *ngIf="!authform?.valid && authform?.touched"
+        >Please enter a valid data</span
+      >
+      <br />
+      <button  type="submit" [disabled]="!authform?.valid" mat-raised-button>{{isSignUpMode?"Sign Up": "Sign In"}}</button>
+      <p *ngIf="isSignUpMode">Already have an account? switch to <button type="button" (click)="onSwitchSignIn()" mat-raised-button>Sign In</button></p>
+      <p *ngIf="!isSignUpMode">Don''t have an account?  <button type="button" (click)="onSwitchSignIn()" mat-raised-button>Sign Up</button></p>
+      </form>
+      <!-- <p>{{isSignUpMode ? "Already have an account? switch to <button type="button" (click)="onSwitchSignIn()">Sign In</button>"
+      :"Don''t have an account? <button type="button" (click)="onSwitchSignIn()">Sign Up</button>"}}</p>
+    </form> -->
+  </main>
+</div>

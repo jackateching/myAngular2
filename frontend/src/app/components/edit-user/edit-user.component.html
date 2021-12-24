@@ -1,0 +1,13 @@
+<app-nav></app-nav>
+<p>Edit User</p>
+<hr/>
+<form class="loginForm"  [formGroup]="editUser" (ngSubmit)="onSubmit()">
+    <label name="username">Username</label>
+    <input type="text" name="username" formControlName="username" >
+    <label name="status">Status</label>
+    <input type="text" name="status" formControlName="status">
+    <label name="level">Level</label>
+    <input type="text" name="level" formControlName="level">
+    <br />
+    <button type="submit" mat-raised-button color="primary">Submit Edit</button>
+</form>

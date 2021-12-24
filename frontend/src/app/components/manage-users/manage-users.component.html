@@ -1,0 +1,25 @@
+<app-nav></app-nav>
+<div>
+    <ul class="allRoom_avail_container">
+        <li>
+            <div class="byDate_title_col">Username</div>
+            <div class="byDate_title_col">Status</div>
+            <div class="byDate_title_col">Level</div>
+            <div class="byDate_title_col">Edit</div>
+            <div class="byDate_title_col">Delete</div>
+        </li>
+    </ul>
+    <ul class="allRoom_avail_container">
+        <li *ngFor="let user of allUsers">
+            <div class="byDate_data_col">{{user.username}}</div>
+            <div class="byDate_data_col">{{user.status}}</div>
+            <div class="byDate_data_col">{{user.level}}</div>
+            <div class="byDate_data_col_last"><button mat-raised-button color="primary" (click)="onEdit(user._id, user.username, user.status, user.level)">Edit</button></div>
+            <div class="byDate_data_col_last"><button mat-raised-button color="primary" (click)="onDelete(user._id)">Delete</button></div>
+        </li>
+    </ul>
+    <div class="unAuthorize" *ngIf="unAuthorize" [ngStyle]="{'font-size':'20px', 'height':'100px'}">
+        You do not have a permission to view this page  
+    </div>
+    <!-- <button (click)="getRooms()">Get Rooms</button> -->
+</div>

@@ -1,0 +1,317 @@
+html, body{
+    height:100%;
+}
+
+/*========================Index page========================*/
+
+#login{
+	/* background-color:#958C7E; */
+	background-color:#514242;
+    height:100%;
+    overflow:hidden;
+}
+main{
+	width:80%;
+    height:100%;
+	background-color:#958C7E;
+	border:1px solid #FFECCF;
+	border-radius: 5px;
+	/* box-shadow: #9f9990 2px 5px 15px 15px; */
+	box-shadow: inset 2px 2px 35px #FFECCF;
+	margin:0 auto;
+}
+.loginForm{
+	width:60%;
+	margin:20px auto;
+	padding:40px;
+	/* background-color: #ccc; */
+	border:1px solid #FFECCF;
+	border-radius: 5px;
+	box-shadow: 3px 3px 25px #FFECCF;
+}
+.login-header{
+    text-align:center;
+    margin:35px;
+}
+
+/* Style all input fields */
+	input {
+	width: 100%;
+	padding: 12px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	margin-top: 20px;
+	margin-bottom: 20px;
+  }
+  input.ng-invalid.ng-touched{
+      border:1px solid red;
+  }
+  
+  /* Style the submit button */
+  input[type=submit] {
+	/* background-color: #9f9990; */
+	background-color: #C0AC8E;
+	color:#423b30;
+	font-size:16px;
+	margin-top:30px;
+	cursor:pointer;
+  }
+  input[type=submit]:hover{
+	  background-color:#423b30;
+	  color: #958C7E;
+  }
+  
+  /* Style the container for inputs */
+  .container {
+	background-color: #f1f1f1;
+	padding: 20px;
+  }
+  
+  /* The message box is shown when the user clicks on the password field */
+  #message {
+	display:none;
+	background: #f1f1f1;
+	color: #000;
+	position: absolute;
+	padding: 20px;
+	margin-top: 10px;
+	right:-10%;
+	top:20%;
+  }
+  
+  #message p {
+	padding: 10px 35px;
+	font-size: 18px;
+  }
+  
+  /* Add a green text color and a checkmark when the requirements are right */
+  .valid {
+	color: #9f9990;
+  }
+  
+  .valid:before {
+	position: relative;
+	left: -35px;
+	content: "✔";
+  }
+  
+  /* Add a red text color and an "x" when the requirements are wrong */
+  .invalid {
+	color: red;
+  }
+  
+  .invalid:before {
+	position: relative;
+	left: -35px;
+	content: "✖";
+  }
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 10px;
+}
+
+/* Set a style for the submit button */
+.registerbtn,
+.loginbtn {
+  font-size:16px;
+  /*background-color: #8b8162;*//*#c9beae*/
+  background-color:#b89a6d;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover,
+.loginbtn:hover {
+  opacity: 1;
+}
+
+/* Add a blue text color to links */
+/* a {
+  color: dodgerblue;
+} */
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+footer{
+	width:100%;
+	height:auto;
+}
+footer .copyright{
+	width:100%;
+	height:auto;
+	overflow:hidden;
+	text-align:center;
+	line-height:4em;
+	margin:0 auto;
+}
+footer .copyright:after{
+	content:"Copyright \00a9 2020 Bellus Inc. All rights reserved.";
+}
+
+
+
+/*========================Signup page========================*/
+.signup{
+    width:600px;
+    margin:0 auto 20px auto;
+}
+
+button.signupbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    cursor: pointer;
+    opacity: 0.9;
+  }
+  
+  button.signupbtn:hover {
+    opacity:1;
+  }
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    padding: 14px 20px;
+    background-color: #f44336;
+  }
+  
+  /* Float cancel and signup buttons and add an equal width */
+  .cancelbtn, .signupbtn {
+    float: left;
+    width: 50%;
+  }
+  
+  /* Add padding to container elements */
+  .container {
+    padding: 16px;
+  }
+  /* Clear floats */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+    .cancelbtn, .signupbtn {
+       width: 100%;
+    }
+  }  
+
+
+/*Nav*/
+header.nav{
+    width:100%;
+    height:100px;
+    background-color:#DBD8D4;
+    color:#3f51b5;
+}
+.logo-title{
+    width:40%;
+    color:#3f51b5;
+    float:left;
+    font-size:28px;
+    text-align:center;
+    padding-top:30px;
+}
+nav a{
+  color:#3f51b5;
+  font-size:16px;
+}
+.logo-title a{
+  color:#3f51b5;
+}
+.pageNav{
+    width:60%;
+    float:left;
+}
+ul{
+}
+nav ul.topNav li{
+    display:inline-block;
+    padding: 40px 20px;
+}
+a.activeLink {
+    /* box-shadow: inset 0 1px 0 0 #dcecfb; */
+    cursor: pointer;
+    color: #6e593e;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    text-shadow: 0 1px 0 #528ecc;
+    outline: 0;
+}
+a.logout:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+
+
+
+
+/*Home*/
+ul.allRoom_avail_container{
+  width:100%;
+  padding:0;
+}
+ul.allRoom_avail_container li{
+  width:100%;
+  border:1px solid black;
+  margin :0;
+  /* padding:0 10px; */
+}
+ul.byDate_avail_container{
+  width:100%;
+  padding:0;
+  background-color:none;
+}
+ul.byDate_avail_container li{
+  width:100%;
+  background-color:none;
+  /* border:1px solid black; */
+  margin :0;
+  /* padding:0 10px; */
+}
+.byDate_title_col{
+  width:125px;
+  margin:10px 20px;
+  text-align: center;
+  display:inline-block;
+}
+.byDate_data_col{
+  width:125px;
+  margin:20px;
+  text-align: center;
+  display:inline-block;
+}
+.byDate_title_col_last{
+  width:100px;
+  margin:20px 15px;
+  padding:0;
+  /* border:1px solid #d2c9bc; */
+  text-align:center;
+  /* border:1px solid #C0AC8E; */
+  display:inline-block;
+}
+/* .byDate_title_col_last:hover{
+  cursor:pointer;
+  border:2px solid #8d8579;
+} */
+
+.byDate_data_col_last{
+  width:100px;
+  margin:20px;
+  text-align: center;
+  display:inline-block;
+}
